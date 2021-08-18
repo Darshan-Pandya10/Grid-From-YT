@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: bolder;
+}
+
+.container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 2fr);
+    grid-auto-rows: 310px; */
+    grid-template-areas:
+        "f f f f"
+        "s s s th"
+        "fo fi fi fi"
+        "si si si si"
+        "se ei ei ni";
+    grid-gap: 10px;
+    margin: 10px 10px;
+}
+
+/* practicing and checking if the grid area is working on my layout or not>? */
+
+.photo1 {
+    grid-area: f;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.photo2 {
+    grid-area: s;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.photo3 {
+    grid-area: th;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.photo4 {
+    grid-area: fo;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.photo5 {
+    grid-area: fi;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.photo6 {
+    grid-area: si;
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+}
+
+.photo7 {
+    grid-area: se;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+
+.photo8 {
+    grid-area: ei;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.photo9 {
+    grid-area: ni;
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+}
+
+
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img {
+    width: 50%;
+    padding-top: 5px;
+}
+
+.name {
+    font-size: 20px;
+    margin-top: 5px;
+    font-family: 'Righteous',
+        cursive;
+    letter-spacing: 2px;
+}
+
+.location {
+    font-size: 20px;
+    margin-top: 5px;
+    font-family: 'Style Script',
+        cursive;
+}
+
+/* .image:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+    margin-bottom: 5px;
+} */
+
+.footer {
+    font-family: 'Barlow',
+        sans-serif;
+    font-size: 22px;
+    padding-top: 20px;
+    text-align: center;
+    width: 100vw;
+    height: 70px;
+    color: whitesmoke;
+    background-color: black;
+}
+
+
+/* Media queries */
+
+@media only screen and (max-width:786px) {
+    .container {
+        grid-template-areas: "f s"
+            "th fo"
+            "fi si"
+            "se ei"
+            "ni ni"
+        ;
+    }
+
+    .photo1 {
+        grid-area: f;
+        grid-column: span 2;
+        grid-row: 1 / 2;
+    }
+
+    .photo2 {
+        grid-area: s;
+        grid-column: span 2;
+        grid-row: 1 / 2;
+    }
+
+    .photo3 {
+        grid-area: th;
+        grid-column: span 2;
+        grid-row: 2 / 3;
+    }
+
+    .photo4 {
+        grid-area: fo;
+        grid-column: span 2;
+        grid-row: 2 / 3;
+    }
+
+    .photo5 {
+        grid-area: fi;
+        grid-column: span 2;
+        grid-row: 4 / 5;
+    }
+
+    .photo6 {
+        grid-area: si;
+        grid-column: span 2;
+        grid-row: 4 / 5;
+    }
+
+    .photo7 {
+        grid-area: se;
+        grid-column: span 2;
+        grid-row: 5 / 6;
+    }
+
+    .photo8 {
+        grid-area: ei;
+        grid-column: span 2;
+        grid-row: 5 / 6;
+    }
+
+    .photo9 {
+        grid-area: ni;
+        grid-column: 1 / 5;
+        grid-row: 6 / 7;
+    }
+
+
+    .gallery {
+        border: 1px solid cadetblue;
+    }
+
+}
+
+@media only screen and (max-width:550px) {
+    .container {
+        grid-template-areas: "f"
+            "s"
+            "th"
+            "fo"
+            "fi"
+            "si"
+            "se"
+            "ei"
+            "ni";
+    }
+
+    .photo1 {
+        grid-area: f;
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+    }
+
+    .photo2 {
+        grid-area: s;
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .photo3 {
+        grid-area: th;
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+    }
+
+    .photo4 {
+        grid-area: fo;
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
+    }
+
+    .photo5 {
+        grid-area: fi;
+        grid-column: 1 / 5;
+        grid-row: 5 / 6;
+    }
+
+    .photo6 {
+        grid-area: si;
+        grid-column: 1 / 5;
+        grid-row: 6 / 7;
+    }
+
+    .photo7 {
+        grid-area: se;
+        grid-column: 1 / 5;
+        grid-row: 7 / 8;
+    }
+
+    .photo8 {
+        grid-area: ei;
+        grid-column: 1 / 5;
+        grid-row: 8 / 9;
+    }
+
+    .photo9 {
+        grid-area: ni;
+        grid-column: 1 / 5;
+        grid-row: 9 / 10;
+    }
+
+
+    .gallery {
+        border: 1px solid crimson;
+    }
+}
