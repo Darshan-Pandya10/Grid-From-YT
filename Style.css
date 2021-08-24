@@ -22,7 +22,7 @@ body {
     margin: 10px 10px;
 }
 
-/* practicing and checking if the grid area is working on my layout or not>? */
+/* practicing and checking if the grid area is working on my layout or not>? it is:) */
 
 .photo1 {
     grid-area: f;
@@ -92,7 +92,7 @@ body {
 
 img {
     width: 50%;
-    padding-top: 5px;
+    padding-top: 0.5rem;
 }
 
 .name {
@@ -110,11 +110,12 @@ img {
         cursive;
 }
 
-/* .image:hover {
-    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-    transform: translateY(-3px) scale(1.1);
+.image:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+        rgba(27, 28, 29, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-2px) scale(1.01);
     margin-bottom: 5px;
-} */
+}
 
 .footer {
     font-family: 'Barlow',
@@ -202,7 +203,7 @@ img {
 
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:500px) {
     .container {
         grid-template-areas: "f"
             "s"
